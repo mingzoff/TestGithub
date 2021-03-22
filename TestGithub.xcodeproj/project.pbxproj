@@ -3,11 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		10FBD52C3006BD960CF0398B /* Pods_TestGithub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E9A208BAC797CEFBF043C1 /* Pods_TestGithub.framework */; };
+		4EC36E1B26086A870008573F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E1A26086A870008573F /* Font.swift */; };
+		4EC36E2426086C710008573F /* APPMaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E2326086C710008573F /* APPMaco.swift */; };
+		4EC36E2926086E0E0008573F /* AppCongfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E2826086E0E0008573F /* AppCongfigure.swift */; };
+		4EC36E2F260870AA0008573F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E2E260870AA0008573F /* RealmManager.swift */; };
+		4EC36E3A2608739B0008573F /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E392608739B0008573F /* RequestError.swift */; };
+		4EC36E42260876EC0008573F /* NetEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E41260876EC0008573F /* NetEnvironment.swift */; };
+		4EC36E48260878E20008573F /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E47260878E20008573F /* HomeAPI.swift */; };
+		4EC36E5026087CD70008573F /* NetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E4F26087CD70008573F /* NetWorking.swift */; };
+		4EC36E5626087E210008573F /* LoadingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E5526087E210008573F /* LoadingPlugin.swift */; };
+		4EC36E6626087F050008573F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E6526087F050008573F /* Logger.swift */; };
+		4EC36E80260885630008573F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E7F260885630008573F /* UIColor+Hex.swift */; };
 		4EF39BF62601FCFB00312B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39BF52601FCFB00312B1F /* AppDelegate.swift */; };
 		4EF39BF82601FCFB00312B1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39BF72601FCFB00312B1F /* SceneDelegate.swift */; };
 		4EF39BFA2601FCFB00312B1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39BF92601FCFB00312B1F /* ViewController.swift */; };
@@ -38,6 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EC36E1A26086A870008573F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		4EC36E2326086C710008573F /* APPMaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPMaco.swift; sourceTree = "<group>"; };
+		4EC36E2826086E0E0008573F /* AppCongfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCongfigure.swift; sourceTree = "<group>"; };
+		4EC36E2E260870AA0008573F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		4EC36E392608739B0008573F /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		4EC36E41260876EC0008573F /* NetEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEnvironment.swift; sourceTree = "<group>"; };
+		4EC36E47260878E20008573F /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		4EC36E4F26087CD70008573F /* NetWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorking.swift; sourceTree = "<group>"; };
+		4EC36E5526087E210008573F /* LoadingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPlugin.swift; sourceTree = "<group>"; };
+		4EC36E6526087F050008573F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		4EC36E7F260885630008573F /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		4EF39BF22601FCFB00312B1F /* TestGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF39BF52601FCFB00312B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF39BF72601FCFB00312B1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +123,99 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4EC36E182608631C0008573F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E7E260885300008573F /* Extensions */,
+				4EC36E46260878C00008573F /* Services */,
+				4EC36E38260872F20008573F /* Networking */,
+				4EC36E36260871810008573F /* Modulars */,
+				4EC36E2D260870200008573F /* Until */,
+				4EC36E2226086B5C0008573F /* Commone */,
+				4EC36E1926086A450008573F /* Constants */,
+				4EF39BF52601FCFB00312B1F /* AppDelegate.swift */,
+				4EF39BF72601FCFB00312B1F /* SceneDelegate.swift */,
+				4EF39BF92601FCFB00312B1F /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4EC36E1926086A450008573F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E1A26086A870008573F /* Font.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4EC36E2226086B5C0008573F /* Commone */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E2326086C710008573F /* APPMaco.swift */,
+				4EC36E2826086E0E0008573F /* AppCongfigure.swift */,
+			);
+			path = Commone;
+			sourceTree = "<group>";
+		};
+		4EC36E2D260870200008573F /* Until */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E2E260870AA0008573F /* RealmManager.swift */,
+				4EC36E6526087F050008573F /* Logger.swift */,
+			);
+			path = Until;
+			sourceTree = "<group>";
+		};
+		4EC36E36260871810008573F /* Modulars */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E37260871860008573F /* Home */,
+			);
+			path = Modulars;
+			sourceTree = "<group>";
+		};
+		4EC36E37260871860008573F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4EC36E38260872F20008573F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E5426087DAE0008573F /* Plugins */,
+				4EC36E392608739B0008573F /* RequestError.swift */,
+				4EC36E41260876EC0008573F /* NetEnvironment.swift */,
+				4EC36E4F26087CD70008573F /* NetWorking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4EC36E46260878C00008573F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E47260878E20008573F /* HomeAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4EC36E5426087DAE0008573F /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E5526087E210008573F /* LoadingPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		4EC36E7E260885300008573F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36E7F260885630008573F /* UIColor+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4EF39BE92601FCFB00312B1F = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +241,7 @@
 		4EF39BF42601FCFB00312B1F /* TestGithub */ = {
 			isa = PBXGroup;
 			children = (
-				4EF39BF52601FCFB00312B1F /* AppDelegate.swift */,
-				4EF39BF72601FCFB00312B1F /* SceneDelegate.swift */,
-				4EF39BF92601FCFB00312B1F /* ViewController.swift */,
+				4EC36E182608631C0008573F /* Sources */,
 				4EF39BFB2601FCFB00312B1F /* Main.storyboard */,
 				4EF39BFE2601FCFD00312B1F /* Assets.xcassets */,
 				4EF39C002601FCFD00312B1F /* LaunchScreen.storyboard */,
@@ -165,7 +278,6 @@
 				90A5C5696B2F8FA80E8E14AB /* Pods-TestGithubTests.debug.xcconfig */,
 				918D2D69918D056E883E4968 /* Pods-TestGithubTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,9 +519,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC36E3A2608739B0008573F /* RequestError.swift in Sources */,
+				4EC36E2926086E0E0008573F /* AppCongfigure.swift in Sources */,
+				4EC36E5026087CD70008573F /* NetWorking.swift in Sources */,
+				4EC36E42260876EC0008573F /* NetEnvironment.swift in Sources */,
+				4EC36E1B26086A870008573F /* Font.swift in Sources */,
 				4EF39BFA2601FCFB00312B1F /* ViewController.swift in Sources */,
 				4EF39BF62601FCFB00312B1F /* AppDelegate.swift in Sources */,
+				4EC36E80260885630008573F /* UIColor+Hex.swift in Sources */,
+				4EC36E5626087E210008573F /* LoadingPlugin.swift in Sources */,
 				4EF39BF82601FCFB00312B1F /* SceneDelegate.swift in Sources */,
+				4EC36E6626087F050008573F /* Logger.swift in Sources */,
+				4EC36E48260878E20008573F /* HomeAPI.swift in Sources */,
+				4EC36E2F260870AA0008573F /* RealmManager.swift in Sources */,
+				4EC36E2426086C710008573F /* APPMaco.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,16 +709,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestGithub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.TestGithub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -605,16 +731,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestGithub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.TestGithub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

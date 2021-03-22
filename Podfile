@@ -24,13 +24,16 @@ target 'TestGithub' do
   # Misc.
   pod 'Then'
   pod 'URLNavigator'
+  
+  # Logging
+  pod 'CocoaLumberjack/Swift' ,:path => './Modules/CocoaLumberjack-master'
 
 
   # Model
   pod 'HandyJSON'
 
   # Persistence
-  pod 'Realm', '~> 10.7.1'
+  pod 'RealmSwift' ,:path => './Modules/realm-cocoa-master'
 
   # Pods for TestGithub
 
