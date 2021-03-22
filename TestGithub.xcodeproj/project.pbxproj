@@ -19,6 +19,10 @@
 		4EC36E5626087E210008573F /* LoadingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E5526087E210008573F /* LoadingPlugin.swift */; };
 		4EC36E6626087F050008573F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E6526087F050008573F /* Logger.swift */; };
 		4EC36E80260885630008573F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E7F260885630008573F /* UIColor+Hex.swift */; };
+		4EC36E95260886BF0008573F /* UIColor+GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E94260886BF0008573F /* UIColor+GitHub.swift */; };
+		4EC36E9D26088B650008573F /* HomeSerice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E9C26088B650008573F /* HomeSerice.swift */; };
+		4EC36EB826088E240008573F /* HomeGitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36EB726088E240008573F /* HomeGitHubModel.swift */; };
+		4EC36EEA26089A660008573F /* Moya+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36EE926089A660008573F /* Moya+Rx.swift */; };
 		4EF39BF62601FCFB00312B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39BF52601FCFB00312B1F /* AppDelegate.swift */; };
 		4EF39BF82601FCFB00312B1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39BF72601FCFB00312B1F /* SceneDelegate.swift */; };
 		4EF39BFA2601FCFB00312B1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39BF92601FCFB00312B1F /* ViewController.swift */; };
@@ -60,6 +64,10 @@
 		4EC36E5526087E210008573F /* LoadingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPlugin.swift; sourceTree = "<group>"; };
 		4EC36E6526087F050008573F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		4EC36E7F260885630008573F /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		4EC36E94260886BF0008573F /* UIColor+GitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+GitHub.swift"; sourceTree = "<group>"; };
+		4EC36E9C26088B650008573F /* HomeSerice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSerice.swift; sourceTree = "<group>"; };
+		4EC36EB726088E240008573F /* HomeGitHubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGitHubModel.swift; sourceTree = "<group>"; };
+		4EC36EE926089A660008573F /* Moya+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Rx.swift"; sourceTree = "<group>"; };
 		4EF39BF22601FCFB00312B1F /* TestGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF39BF52601FCFB00312B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF39BF72601FCFB00312B1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 		4EC36E182608631C0008573F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4EC36EE826089A4E0008573F /* Rx */,
 				4EC36E7E260885300008573F /* Extensions */,
 				4EC36E46260878C00008573F /* Services */,
 				4EC36E38260872F20008573F /* Networking */,
@@ -177,6 +186,7 @@
 		4EC36E37260871860008573F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4EC36EB626088E090008573F /* Models */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -196,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC36E47260878E20008573F /* HomeAPI.swift */,
+				4EC36E9C26088B650008573F /* HomeSerice.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -212,8 +223,25 @@
 			isa = PBXGroup;
 			children = (
 				4EC36E7F260885630008573F /* UIColor+Hex.swift */,
+				4EC36E94260886BF0008573F /* UIColor+GitHub.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EC36EB626088E090008573F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36EB726088E240008573F /* HomeGitHubModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4EC36EE826089A4E0008573F /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				4EC36EE926089A660008573F /* Moya+Rx.swift */,
+			);
+			path = Rx;
 			sourceTree = "<group>";
 		};
 		4EF39BE92601FCFB00312B1F = {
@@ -526,13 +554,17 @@
 				4EC36E1B26086A870008573F /* Font.swift in Sources */,
 				4EF39BFA2601FCFB00312B1F /* ViewController.swift in Sources */,
 				4EF39BF62601FCFB00312B1F /* AppDelegate.swift in Sources */,
+				4EC36EEA26089A660008573F /* Moya+Rx.swift in Sources */,
 				4EC36E80260885630008573F /* UIColor+Hex.swift in Sources */,
 				4EC36E5626087E210008573F /* LoadingPlugin.swift in Sources */,
+				4EC36EB826088E240008573F /* HomeGitHubModel.swift in Sources */,
+				4EC36E95260886BF0008573F /* UIColor+GitHub.swift in Sources */,
 				4EF39BF82601FCFB00312B1F /* SceneDelegate.swift in Sources */,
 				4EC36E6626087F050008573F /* Logger.swift in Sources */,
 				4EC36E48260878E20008573F /* HomeAPI.swift in Sources */,
 				4EC36E2F260870AA0008573F /* RealmManager.swift in Sources */,
 				4EC36E2426086C710008573F /* APPMaco.swift in Sources */,
+				4EC36E9D26088B650008573F /* HomeSerice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

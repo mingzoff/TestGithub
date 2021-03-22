@@ -16,7 +16,7 @@ extension HttpRequest {
         switch self
         {
          case .appres:
-            return "https://api.guihub.com/"
+            return "https://api.github.com"
         }
     }
 }

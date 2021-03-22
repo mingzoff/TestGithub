@@ -24,6 +24,7 @@ target 'TestGithub' do
   # Misc.
   pod 'Then'
   pod 'URLNavigator'
+
   
   # Logging
   pod 'CocoaLumberjack/Swift' ,:path => './Modules/CocoaLumberjack-master'
@@ -31,6 +32,10 @@ target 'TestGithub' do
 
   # Model
   pod 'HandyJSON'
+  pod 'ObjectMapper'
+  pod 'SwiftyJSON'
+
+  
 
   # Persistence
   pod 'RealmSwift' ,:path => './Modules/realm-cocoa-master'

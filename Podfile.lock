@@ -10,6 +10,7 @@ PODS:
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - ObjectMapper (4.2.0)
   - ReactorKit (1.2.1):
     - RxSwift (>= 4.0.0)
   - Realm (10.7.2):
@@ -25,6 +26,7 @@ PODS:
     - RxCocoa (>= 4.0.0)
     - RxSwift (>= 4.0.0)
   - SnapKit (5.0.1)
+  - SwiftyJSON (5.0.0)
   - Then (2.7.0)
   - URLNavigator (2.3.0)
 
@@ -33,12 +35,14 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift (from `./Modules/CocoaLumberjack-master`)
   - HandyJSON
   - Moya/RxSwift (~> 11.0.0)
+  - ObjectMapper
   - ReactorKit
   - RealmSwift (from `./Modules/realm-cocoa-master`)
   - RxCocoa
   - RxSwift
   - RxViewController
   - SnapKit
+  - SwiftyJSON
   - Then
   - URLNavigator
 
@@ -47,6 +51,7 @@ SPEC REPOS:
     - Alamofire
     - HandyJSON
     - Moya
+    - ObjectMapper
     - ReactorKit
     - Realm
     - Result
@@ -54,6 +59,7 @@ SPEC REPOS:
     - RxSwift
     - RxViewController
     - SnapKit
+    - SwiftyJSON
     - Then
     - URLNavigator
 
@@ -68,6 +74,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ReactorKit: 8be57f0527ad1ac2963cd5c338274a46a01e57a3
   Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
   RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
@@ -76,9 +83,10 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   RxViewController: e93e7c233d5b5b62c32231d69726d55f54081bc6
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: 89c4dbb525afb04c4627ccdf907f22e7c8cfbdfc
+PODFILE CHECKSUM: 405d878a4aba326219d08eb8a4f2f6beceb9d4c6
 
 COCOAPODS: 1.10.1
