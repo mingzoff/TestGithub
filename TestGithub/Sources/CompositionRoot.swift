@@ -29,11 +29,13 @@ final class CompositionRoot {
 
         URLNavigationMap.initialize(navigator: navigator)
         
+        //网络请求
         let homeService = HomeService(networking: HomeNetworking())
-        
-       
+               
         let mainTabBarController = MainTabBarController(reactor: MainTabBarViewReactor(),
-                                                        homeParentViewController: HomeViewController(service: homeService),
+                                                        homeParentViewController: HomeViewController(reactor: HomeViewReactor(homeService: homeService), homeSectionDelegateFactory: {
+                                                            HomeSectionDelegate()
+                                                        }),
                                                         historyViewController: HistoryViewController())
                                           
         

@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ReactorKit",
+        "repositoryURL": "https://github.com/ReactorKit/ReactorKit.git",
+        "state": {
+          "branch": null,
+          "revision": "4257c86607e2ae41eee7a3631dd6ffc8eba15f38",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "RxDataSources",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxDataSources.git",
+        "state": {
+          "branch": null,
+          "revision": "ddfc9a1fdba650984f3a72b5b318e55fcfeccbae",
+          "version": "3.0.2"
+        }
+      },
+      {
+        "package": "RxExpect",
+        "repositoryURL": "https://github.com/devxoul/RxExpect.git",
+        "state": {
+          "branch": null,
+          "revision": "d27d2f730a41728e0f4ed7d8326e14296d3a2766",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "12cccb171ad9038251af6883807f0290c1d75a5b",
+          "version": "4.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

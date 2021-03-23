@@ -7,6 +7,7 @@ target 'TestGithub' do
 
   # Architecture
   pod 'ReactorKit'
+  pod 'SectionReactor' ,:path => './Modules/SectionReactor'
 
   
   # Networking
@@ -17,15 +18,20 @@ target 'TestGithub' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxViewController'
+  pod 'RxDataSources' ,:path => './Modules/RxDataSources'
 
   # UI
   pod 'SnapKit'
-  pod 'ManualLayout'
+  pod 'EmptyKit' ,:path => './Modules/EmptyKit-master'
+
+  
 
 
   # Misc.
   pod 'Then'
   pod 'URLNavigator'
+  pod 'ReusableKit' ,:path => './Modules/ReusableKit-master'
+  pod 'ReusableKit/RxSwift'  ,:path => './Modules/ReusableKit-master'
 
   
   # Logging

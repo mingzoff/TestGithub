@@ -7,7 +7,7 @@
 import RxSwift
 
 protocol HomeServiceType {
-    //启动页
+    //获取数据
     func getGitHubMessage() -> Single<HomeGitHubModel>
 }
 

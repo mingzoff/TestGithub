@@ -23,11 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.dependency = self.dependency ?? CompositionRoot.resolve()
         self.window = self.dependency.window
         self.dependency.configureAppearance()
-
-        
         return true
     }
 
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey: Any] = [:]
+        ) -> Bool {
+        return self.dependency.openURL(url, options)
+    }
 
 
 
