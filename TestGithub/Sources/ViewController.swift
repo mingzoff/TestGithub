@@ -28,11 +28,14 @@ class ViewController: UIViewController {
         homeService.getGitHubMessage().subscribe { (model) in
             
             print("请求成功");
-            print(model.message);
-            print(model.documentation_url);
+            print(model.current_user_url ?? "");
+            print(model.current_user_authorizations_html_url ?? "");
+            print(model.create_time)
 
         } onError: { (error) in
             print("请求失败");
+            print(error)
+            
 
         };
 

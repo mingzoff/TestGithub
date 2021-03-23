@@ -24,8 +24,14 @@ final class HomeService: HomeServiceType{
 
         return networking.request(.HomeGitHub).do(onSuccess: { (response) in
             //成功且下拉才缓存
+            print("请求成功 准备缓存数据")
+            print("请求成功");
+            
       
         }, onError: { (error) in
+            
+            print("请求失败 准备缓存数据")
+
           
         }).map(HomeGitHubModel.self)
 

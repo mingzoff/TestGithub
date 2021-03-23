@@ -6,7 +6,6 @@
 //
 
 ///定义返回的JSON数据字段
-let RESULT_CODE = "code"//状态码
 let RESULT_MESSAGE = "message"//错误消息提示
 let RESULT_DATA = "data"//数据包
 let RESULT_RESULT = "result"//数据包

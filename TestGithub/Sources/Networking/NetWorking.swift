@@ -43,17 +43,17 @@ final class Networking<Target: TargetType>: MoyaProvider<Target> {
                 
                 if let response = (error as? MoyaError)?.response {
                     if let jsonObject = try? response.mapJSON(failsOnEmptyData: false) {
-                        let message = "FAILURE: \(requestString) (\(response.statusCode))\n\(jsonObject)"
+                        let message = "FAILURE1: \(requestString) (\(response.statusCode))\n\(jsonObject)"
                         log.warning(message, file: file, function: function, line: line)
                     } else if let rawString = String(data: response.data, encoding: .utf8) {
-                        let message = "FAILURE: \(requestString) (\(response.statusCode))\n\(rawString)"
+                        let message = "FAILURE2: \(requestString) (\(response.statusCode))\n\(rawString)"
                         log.warning(message, file: file, function: function, line: line)
                     } else {
-                        let message = "FAILURE: \(requestString) (\(response.statusCode))"
+                        let message = "FAILURE3: \(requestString) (\(response.statusCode))"
                         log.warning(message, file: file, function: function, line: line)
                     }
                 } else {
-                    let message = "FAILURE: \(requestString)\n\(error)"
+                    let message = "FAILURE4: \(requestString)\n\(error)"
                     log.warning(message, file: file, function: function, line: line)
                 }
             }, onSubscribed: {

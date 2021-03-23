@@ -29,7 +29,7 @@ extension HomeAPI : TargetType{
     var method: Moya.Method {
         switch self {
         case .HomeGitHub:
-            return .post
+            return .get
         }
     }
     

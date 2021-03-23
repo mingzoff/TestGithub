@@ -20,6 +20,8 @@ target 'TestGithub' do
 
   # UI
   pod 'SnapKit'
+  pod 'ManualLayout'
+
 
   # Misc.
   pod 'Then'

@@ -18,8 +18,6 @@ extension PrimitiveSequence where TraitType == SingleTrait, Element == Moya.Resp
        return self
            .map { (response) -> T in
              let json = try JSON(data: response.data)
-             guard let code = json[RESULT_CODE].int else { throw RequestError.noCodeKey }
-             if code != StatusCode.success.rawValue { throw RequestError.sysError(statusCode:"\(code)" , errorMsg: json[RESULT_MESSAGE].string) }
             if let data = json[RESULT_DATA].dictionaryObject {
                 return try Mapper<T>().map(JSON: data)
             }else if let data = json[RESULT_RESULT].dictionaryObject {
@@ -42,8 +40,6 @@ extension PrimitiveSequence where TraitType == SingleTrait, Element == Moya.Resp
         return self
             .map { response -> [T] in
                  let json = try JSON(data: response.data)
-                 guard let code = json[RESULT_CODE].int else { throw RequestError.noCodeKey }
-                 if code != StatusCode.success.rawValue { throw RequestError.sysError(statusCode:"\(code)" , errorMsg: json[RESULT_MESSAGE].string) }
                  var jsonArray: [Any] = []
                  if let array = json[RESULT_DATA].arrayObject {
                     jsonArray = array
