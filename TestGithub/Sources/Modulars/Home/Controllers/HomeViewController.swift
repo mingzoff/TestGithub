@@ -57,6 +57,11 @@ final class HomeViewController: BaseCollectionViewController,View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        self.rx.viewDidLoad
+            .map{Reactor.Action.loadDataFromCache}
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
 
         collectionView.rx.itemSelected(dataSource: dataSource)

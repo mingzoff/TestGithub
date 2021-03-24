@@ -23,13 +23,14 @@ final class HomeService: HomeServiceType{
     func getGitHubMessage() -> Single<HomeGitHubModel> {
 
         return networking.request(.HomeGitHub).do(onSuccess: { (response) in
-            //成功且下拉才缓存
+             //成功拿到数据，在subscribe 之前调用 这里可以操作一些事情 比如缓存网络数据
            
             
-      
         }, onError: { (error) in
           
-        }).map(HomeGitHubModel.self)
+        }
+        
+        ).map(HomeGitHubModel.self)
 
     }
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 final class HomeViewReactor: Reactor {
     
@@ -13,15 +14,15 @@ final class HomeViewReactor: Reactor {
    
     enum Action {
         //界面发起加载数据
+        case loadDataFromCache
         case loadDataFromWeb
         case loadNextDataFromWeb
 
     }
     
     enum Mutation {
-        //添加服务端返回的数据
-        case firstLoadData(HomeGitHubModel)
-        case appendServerData(HomeGitHubModel)
+        //添加返回的数据
+        case appendData(HomeGitHubModel)
     }
     
     struct State {
@@ -47,10 +48,13 @@ final class HomeViewReactor: Reactor {
     //处理Action动作
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case .loadDataFromCache:
+            return getCacheData().asObservable().map { .appendData($0)}
         case  .loadDataFromWeb:
-            return self.homeService.getGitHubMessage().asObservable().map {.firstLoadData($0)}
+            setTimeRun()//启动定时器
+            return self.homeService.getGitHubMessage().asObservable().map {.appendData($0)}
         case  .loadNextDataFromWeb:
-            return self.homeService.getGitHubMessage().asObservable().map {.appendServerData($0)}
+            return self.homeService.getGitHubMessage().asObservable().map {.appendData($0)}
         }
     }
     
@@ -58,20 +62,13 @@ final class HomeViewReactor: Reactor {
     func reduce(state: State, mutation: Mutation) -> State {
         var state = state
         switch mutation {
-        case .firstLoadData(let model):
-            //从服务端拿到数据
-            //处理数据
-            state.listModels.append(model)
-            //构建HomeSectionReactor
-            let homeSectionReactor = HomeSectionReactor(listModels: state.listModels);
-            state.sections = [.celldata(homeSectionReactor.currentState.sectionItems.map(HomeViewSectionItem.celldata))]
-            setTimeRun()  
-            return state
-         case .appendServerData(let model):
+    
+         case .appendData(let model):
             state.listModels.insert(model, at: 0)
             //构建HomeSectionReactor
             let homeSectionReactor = HomeSectionReactor(listModels: state.listModels);
             state.sections = [.celldata(homeSectionReactor.currentState.sectionItems.map(HomeViewSectionItem.celldata))]
+            cacheHomeGitHubDataModel(model: model);
             return state
           }
     }
@@ -88,8 +85,27 @@ final class HomeViewReactor: Reactor {
             timeRun.subscribe { (num) in
                 print("num:\(num)")
              } .disposed(by: disposeBag)
-
-     
+    }
+    
+    //缓存数据
+    func cacheHomeGitHubDataModel(model:HomeGitHubModel)  {
+        let cacheModel = HomeGitHubRealModel()
+        cacheModel.modelJsonString = model.toJSONString()
+        cacheModel.key = NSStringFromClass(HomeGitHubRealModel.self)
+        RealmManager.addCanUpdate(cacheModel)
+    }
+    
+    //返回缓存数据
+    func getCacheData() -> Single<HomeGitHubModel> {
+        
+        guard let result = RealmManager.selectByAll(HomeGitHubRealModel.self).first,
+              let cacheData = result.modelJsonString
+        else {
+            return Observable<HomeGitHubModel>.empty().asSingle()
+        }
+        //转换数据
+        let model: HomeGitHubModel  =  try! Mapper<HomeGitHubModel>().map(JSONString: cacheData)
+        return Single.just(model)
     }
 
 }

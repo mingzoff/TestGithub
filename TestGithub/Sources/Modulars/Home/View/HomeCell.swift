@@ -29,15 +29,11 @@ final class HomeCell: BaseCollectionViewCell,View {
         $0.textColor = .app_color_darkGray
     };
     
-    private let viewLine = UIView().then {
-        $0.backgroundColor = .app_color_gray
-    };
     
     override func initialize() {
         contentView.addSubview(labtitle)
         contentView.addSubview(labContent)
         contentView.addSubview(labTime)
-        contentView.addSubview(viewLine)
 
     }
     
@@ -80,10 +76,7 @@ final class HomeCell: BaseCollectionViewCell,View {
             $0.bottom.equalTo(contentView).offset(-10)
         }
         
-        viewLine.snp.makeConstraints {
-            $0.height.equalTo(0.5)
-            $0.bottom.right.left.equalTo(contentView).offset(0)
-        }
+    
     }
     
 }

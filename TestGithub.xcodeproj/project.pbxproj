@@ -27,6 +27,7 @@
 		4E6D73092609F9570034819D /* HomeSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D73082609F9570034819D /* HomeSectionDelegate.swift */; };
 		4E89417C260AD7EA00E4D2C5 /* UICollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89417B260AD7EA00E4D2C5 /* UICollectionView+Rx.swift */; };
 		4E89419D260B07E200E4D2C5 /* NSDate+Until.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89419C260B07E200E4D2C5 /* NSDate+Until.swift */; };
+		4E8941C1260B370600E4D2C5 /* HomeGitHubRealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8941C0260B370600E4D2C5 /* HomeGitHubRealModel.swift */; };
 		4EC36E1B26086A870008573F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E1A26086A870008573F /* Font.swift */; };
 		4EC36E2426086C710008573F /* APPMaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E2326086C710008573F /* APPMaco.swift */; };
 		4EC36E2926086E0E0008573F /* AppCongfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC36E2826086E0E0008573F /* AppCongfigure.swift */; };
@@ -90,6 +91,7 @@
 		4E6D73082609F9570034819D /* HomeSectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionDelegate.swift; sourceTree = "<group>"; };
 		4E89417B260AD7EA00E4D2C5 /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Rx.swift"; sourceTree = "<group>"; };
 		4E89419C260B07E200E4D2C5 /* NSDate+Until.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Until.swift"; sourceTree = "<group>"; };
+		4E8941C0260B370600E4D2C5 /* HomeGitHubRealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGitHubRealModel.swift; sourceTree = "<group>"; };
 		4EC36E1A26086A870008573F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		4EC36E2326086C710008573F /* APPMaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPMaco.swift; sourceTree = "<group>"; };
 		4EC36E2826086E0E0008573F /* AppCongfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCongfigure.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC36EB726088E240008573F /* HomeGitHubModel.swift */,
+				4E8941C0260B370600E4D2C5 /* HomeGitHubRealModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				4E6D72402609B0410034819D /* URLNavigationMap.swift in Sources */,
 				4E89417C260AD7EA00E4D2C5 /* UICollectionView+Rx.swift in Sources */,
 				4E6D72FF2609F2230034819D /* HomeCell.swift in Sources */,
+				4E8941C1260B370600E4D2C5 /* HomeGitHubRealModel.swift in Sources */,
 				4E6D72672609C57D0034819D /* BaseViewController.swift in Sources */,
 				4E6D72452609B18F0034819D /* AppRouter.swift in Sources */,
 				4EC36E80260885630008573F /* UIColor+Hex.swift in Sources */,
