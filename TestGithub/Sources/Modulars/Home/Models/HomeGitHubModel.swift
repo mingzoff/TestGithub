@@ -16,7 +16,7 @@ struct HomeGitHubModel: ImmutableMappable {
     var  authorizations_url:String?
     var  code_search_url:String?
     var  commit_search_url:String?
-    var  create_time : NSDate = NSDate.init(timeIntervalSinceNow: 0)
+    var  create_time : Date = Date.init(timeIntervalSinceNow: 0)
     
 
     init(map: Map) throws {

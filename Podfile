@@ -19,6 +19,8 @@ target 'TestGithub' do
   pod 'RxCocoa'
   pod 'RxViewController'
   pod 'RxDataSources' ,:path => './Modules/RxDataSources'
+  pod 'RxOptional' ,:path => './Modules/RxOptional'
+
 
   # UI
   pod 'SnapKit'

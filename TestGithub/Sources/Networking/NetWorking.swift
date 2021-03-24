@@ -75,22 +75,15 @@ final class Networking<Target: TargetType>: MoyaProvider<Target> {
         
         if target.method == .get {
             
-            let s = param.map { (key,value) -> String in
-                
-                return "\(key)=\(value)&"
-            }
-            
+            let s = param.map { (key,value) -> String in return "\(key)=\(value)&"}
             for p in s {
                 url += p
             }
-            
             url.remove(at: String.Index(encodedOffset: url.count - 1))
-            
             log.info("请求链接:\(url) \n 请求方法:\(target.method)")
             
         }else{
             log.info("请求链接:\(url) \n 参数:\(param) \n 请求方法:\(target.method)")
-            
         }
         
         return MoyaProvider.defaultEndpointMapping(for: target)

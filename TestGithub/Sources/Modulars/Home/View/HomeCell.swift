@@ -14,31 +14,75 @@ final class HomeCell: BaseCollectionViewCell,View {
     
     
     private let labtitle = UILabel().then {
-        $0.font = Font.SysFont.sys_12
+        $0.font = Font.SysFont.sys_14
         $0.textColor = .app_color_black
     };
     
+    private let labContent = UILabel().then {
+        $0.font = Font.SysFont.sys_13
+        $0.textColor = .app_color_lightBlack
+        $0.numberOfLines = 2;
+    };
+    
+    private let labTime = UILabel().then {
+        $0.font = Font.SysFont.sys_12
+        $0.textColor = .app_color_darkGray
+    };
+    
+    private let viewLine = UIView().then {
+        $0.backgroundColor = .app_color_gray
+    };
     
     override func initialize() {
-        
         contentView.addSubview(labtitle)
+        contentView.addSubview(labContent)
+        contentView.addSubview(labTime)
+        contentView.addSubview(viewLine)
 
     }
     
     class func size() -> CGSize {
-        return CGSize(width: kScreenWidth, height: 80)
+        return CGSize(width: kScreenWidth, height: 90)
     }
     
     
     func bind(reactor: HomeCellReactor) {
         
+        reactor.state.map{$0.current_user_url}
+            .bind(to: self.labtitle.rx.text)
+            .disposed(by: disposeBag)
+        
+        reactor.state.map{$0.authorizations_html_url}
+            .bind(to: self.labContent.rx.text)
+            .disposed(by: disposeBag)
+        
+        reactor.state.map{$0.createTime}
+            .bind(to: self.labTime.rx.text)
+            .disposed(by: disposeBag)
+            
     }
     
     
     override func layoutSubviews() {
         labtitle.snp.makeConstraints {
             $0.left.top.equalTo(contentView).offset(10)
-            $0.right.equalTo(-10)
+            $0.right.equalTo(contentView).offset(-10)
+        }
+        
+        labContent.snp.makeConstraints {
+            $0.left.equalTo(contentView).offset(10)
+            $0.right.equalTo(contentView).offset(-10)
+            $0.top.equalTo(labtitle.snp_bottomMargin).offset(10)
+        }
+        
+        labTime.snp.makeConstraints {
+            $0.right.equalTo(contentView).offset(-10)
+            $0.bottom.equalTo(contentView).offset(-10)
+        }
+        
+        viewLine.snp.makeConstraints {
+            $0.height.equalTo(0.5)
+            $0.bottom.right.left.equalTo(contentView).offset(0)
         }
     }
     
