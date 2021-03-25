@@ -40,7 +40,6 @@ target 'TestGithub' do
 
 
   # Model
-  pod 'HandyJSON'
   pod 'ObjectMapper'
   pod 'SwiftyJSON'
 

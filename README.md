@@ -17,3 +17,6 @@ Rxswift + Moya 负责网络请求
 RxSwift + ReactorKit   构建项目框架
 
 RealmSwift 负责数据持久化
+
+编译注意：
+pod完成后需要将Pods—>TARGETS  —> SectionReactor —> iOS Deployment Target 设置为9.0 否则编译会出错
