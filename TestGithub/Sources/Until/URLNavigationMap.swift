@@ -6,6 +6,7 @@
 //
 
 import URLNavigator
+import ObjectMapper
 
 
 final class URLNavigationMap {
@@ -15,6 +16,17 @@ final class URLNavigationMap {
         navigator.register(AppPushType.history_vc.path) { (url, values, context) -> UIViewController? in
             return HistoryViewController()
         }
+        
+        navigator.register(AppPushType.home_detail_vc.path) { (url, values, context) -> UIViewController? in
+            
+            guard let context = context as? HomeGitHubModel
+            else { return nil }
+            let vc =  HomeDetailViewController()
+                vc.gitHubModel = context
+                vc.hidesBottomBarWhenPushed = true
+            return vc
+        }
+
      
     }
     

@@ -90,8 +90,9 @@ final class HomeViewReactor: Reactor {
     //缓存数据
     func cacheHomeGitHubDataModel(model:HomeGitHubModel)  {
         let cacheModel = HomeGitHubRealModel()
+        let uuid = UUID().uuidString
         cacheModel.modelJsonString = model.toJSONString()
-        cacheModel.key = NSStringFromClass(HomeGitHubRealModel.self)
+        cacheModel.key = uuid
         RealmManager.addCanUpdate(cacheModel)
     }
     

@@ -10,10 +10,6 @@ import Foundation
 
 final class MainTabBarController: UITabBarController,View {
 
-    // MARK: Constants
-    fileprivate struct Metric {
-        static let tabBarHeight = 44
-    }
     
     var disposeBag = DisposeBag()
     
@@ -35,6 +31,7 @@ final class MainTabBarController: UITabBarController,View {
                 return navigationController
              }
         self.tabBar.barTintColor = .app_color_white
+      
         
     }
     
@@ -52,9 +49,7 @@ final class MainTabBarController: UITabBarController,View {
             .scan((nil, nil)) { state, viewController in
                 return (state.1, viewController)
             }.subscribe(onNext: { (fromVc,toVc) in
-                 
-                print("点击处理Tab点击事件")
-            
+                log.info("点击处理Tab点击事件")
             }).disposed(by: disposeBag)
     }
     

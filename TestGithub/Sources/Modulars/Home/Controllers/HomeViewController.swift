@@ -20,7 +20,8 @@ final class HomeViewController: BaseCollectionViewController,View {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "首页"
+
+        
     }
     
     // MARK: Initializing
@@ -31,6 +32,11 @@ final class HomeViewController: BaseCollectionViewController,View {
         self.dataSource = type(of: self).dataSourceFactory(homeSectionDelegate: self.homeSectionDelegate)
         super.init()
         self.homeSectionDelegate.registerReusables(to: self.collectionView)
+        
+        self.title = "首页";
+
+        self.tabBarItem.image = UIImage(named: "tabBar_home")
+        self.tabBarItem.selectedImage = UIImage(named: "tabBar_home_s")?.withRenderingMode(.alwaysOriginal)
     }
     
     private static func dataSourceFactory(
@@ -70,7 +76,7 @@ final class HomeViewController: BaseCollectionViewController,View {
             case let .celldata(item):
                 switch item {
                 case let .homecellOne(cellReactor):
-                    print(cellReactor.cellmodel)
+                    AppRouter.push(AppPushType.home_detail_vc,context: cellReactor.cellmodel)
                 }
             }
         })

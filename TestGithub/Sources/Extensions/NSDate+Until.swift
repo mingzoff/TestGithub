@@ -16,6 +16,14 @@ extension NSDate{
         
     }
     
+    static func getDateByFormatsss(dateFrom:Date) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.sss"
+
+        return dateFormatter.string(from: dateFrom as Date)
+        
+    }
 
 
     

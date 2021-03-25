@@ -10,6 +10,8 @@ import URLNavigator
 enum AppPushType {
     case history_vc
     case home_vc
+    case home_detail_vc
+
 }
 
 extension AppPushType{
@@ -20,11 +22,13 @@ extension AppPushType{
             return "TestGitHub://home/homevc"
         case .history_vc:
             return "TestGitHub://history/historyvc"
+        case .home_detail_vc:
+            return "TestGitHub://history/home_detail_vc"
         }
     }
 }
 
-class BilibiliRouter {
+class AppRouter {
     
     @discardableResult
     class func push(_ type:AppPushType, context: Any? = nil) -> UIViewController? {
@@ -37,4 +41,6 @@ class BilibiliRouter {
         
         return navigator.push(url)
     }
+    
+
 }

@@ -13,7 +13,7 @@ final class HomeCell: BaseCollectionViewCell,View {
   
     
     
-    private let labtitle = UILabel().then {
+    private let labTitle = UILabel().then {
         $0.font = Font.SysFont.sys_14
         $0.textColor = .app_color_black
     };
@@ -31,7 +31,7 @@ final class HomeCell: BaseCollectionViewCell,View {
     
     
     override func initialize() {
-        contentView.addSubview(labtitle)
+        contentView.addSubview(labTitle)
         contentView.addSubview(labContent)
         contentView.addSubview(labTime)
 
@@ -45,7 +45,7 @@ final class HomeCell: BaseCollectionViewCell,View {
     func bind(reactor: HomeCellReactor) {
         
         reactor.state.map{$0.current_user_url}
-            .bind(to: self.labtitle.rx.text)
+            .bind(to: self.labTitle.rx.text)
             .disposed(by: disposeBag)
         
         reactor.state.map{$0.authorizations_html_url}
@@ -60,7 +60,7 @@ final class HomeCell: BaseCollectionViewCell,View {
     
     
     override func layoutSubviews() {
-        labtitle.snp.makeConstraints {
+        labTitle.snp.makeConstraints {
             $0.left.top.equalTo(contentView).offset(10)
             $0.right.equalTo(contentView).offset(-10)
         }
@@ -68,7 +68,7 @@ final class HomeCell: BaseCollectionViewCell,View {
         labContent.snp.makeConstraints {
             $0.left.equalTo(contentView).offset(10)
             $0.right.equalTo(contentView).offset(-10)
-            $0.top.equalTo(labtitle.snp_bottomMargin).offset(10)
+            $0.top.equalTo(labTitle.snp_bottomMargin).offset(10)
         }
         
         labTime.snp.makeConstraints {

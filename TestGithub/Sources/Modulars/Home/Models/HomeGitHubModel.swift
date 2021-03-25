@@ -31,6 +31,7 @@ struct HomeGitHubModel: ImmutableMappable {
         current_user_authorizations_html_url <- map["current_user_authorizations_html_url"]
         authorizations_url <- map["authorizations_url"]
         code_search_url <- map["code_search_url"]
+        commit_search_url <- map["commit_search_url"]
         create_time <- (map["create_time"], DateTransform())
     }
 }
