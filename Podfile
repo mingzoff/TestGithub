@@ -7,24 +7,23 @@ target 'TestGithub' do
 
   # Architecture
   pod 'ReactorKit'
-  pod 'SectionReactor' ,:path => './Modules/SectionReactor'
-
+  pod 'SectionReactor'
   
   # Networking
   pod 'Alamofire'
-  pod 'Moya/RxSwift', '~> 11.0.0'
+  pod 'Moya/RxSwift'
 
   # Rx
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxViewController'
-  pod 'RxDataSources' ,:path => './Modules/RxDataSources'
-  pod 'RxOptional' ,:path => './Modules/RxOptional'
+  pod 'RxDataSources'
+  pod 'RxOptional'
 
 
   # UI
   pod 'SnapKit'
-  pod 'EmptyKit' ,:path => './Modules/EmptyKit-master'
+  pod 'EmptyKit'
 
   
 
@@ -32,12 +31,12 @@ target 'TestGithub' do
   # Misc.
   pod 'Then'
   pod 'URLNavigator'
-  pod 'ReusableKit' ,:path => './Modules/ReusableKit-master'
-  pod 'ReusableKit/RxSwift'  ,:path => './Modules/ReusableKit-master'
+  pod 'ReusableKit'
+  pod 'ReusableKit/RxSwift'
 
   
   # Logging
-  pod 'CocoaLumberjack/Swift' ,:path => './Modules/CocoaLumberjack-master'
+  pod 'CocoaLumberjack/Swift'
 
 
   # Model
@@ -48,7 +47,7 @@ target 'TestGithub' do
   
 
   # Persistence
-  pod 'RealmSwift' ,:path => './Modules/realm-cocoa-master'
+  pod 'RealmSwift'
 
   # Pods for TestGithub
 
